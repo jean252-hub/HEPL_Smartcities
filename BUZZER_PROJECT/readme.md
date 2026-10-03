@@ -80,4 +80,3 @@ En parallèle, la boucle principale joue la musique sélectionnée.
 
 Le bouton poussoir peut être utilisé à tout moment pour changer de musique grâce à l'interruption.
 
-Le fonctionnement général peut donc être résumé ainsi :
