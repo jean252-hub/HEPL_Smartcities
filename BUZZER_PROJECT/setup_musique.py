@@ -30,7 +30,7 @@ DOUBLE_CROCHE = NOIRE / 4
 
 partitions = {
     "star_wars_dark": [
-        ("LA", NOIRE), ("LA", NOIRE), ("LA", NOIRE), ("FA", CROCHE * 1.5), ("DO_AIGU", DOUBLE_CROCHE),
+        ("LA", NOIRE), ("LA", NOIRE), ("LA", NOIRE), ("FA", CROCHE * 1.5), ("DO_AIGU", DOUBLE_CROCHE),#croche *  1.5 = croche pointé
         ("LA", NOIRE), ("FA", CROCHE * 1.5), ("DO_AIGU", DOUBLE_CROCHE), ("LA", BLANCHE),
         ("MI_AIGU", NOIRE), ("MI_AIGU", NOIRE), ("MI_AIGU", NOIRE), ("FA_AIGU", CROCHE * 1.5), ("DO_AIGU", DOUBLE_CROCHE),
         ("SOl#", NOIRE), ("FA", CROCHE * 1.5), ("DO_AIGU", DOUBLE_CROCHE), ("LA", BLANCHE)
