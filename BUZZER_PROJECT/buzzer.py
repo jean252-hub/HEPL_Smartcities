@@ -7,19 +7,18 @@ ROTARY_ANGLE_SENSOR = ADC(0)
 buzzer = PWM(Pin(18))
 led = Pin(16,Pin.OUT)
 soundVolum = 1
-# Variable pour savoir si une note est en cours (évite que le thread réactive le son pendant un silence)
 note_en_cours = False 
-buttoucount = 1
+buttoncount = 1
 
 
 
 def btninterruption(pin):
-    global buttoucount
+    global buttoncount
 
-    buttoucount += 1
+    buttoncount += 1
 
-    if buttoucount == 5:
-        buttoucount = 1
+    if buttoncount == 5:
+        buttoncount = 1
 
 boutton = Pin(20, Pin.IN, Pin.PULL_UP)
 boutton.irq(trigger=Pin.IRQ_FALLING, handler=btninterruption)
@@ -101,5 +100,5 @@ _thread.start_new_thread(setVolumeButton, ())
 
 
 while True:
-    musicChoice(buttoucount)
+    musicChoice(buttoncount)
     sleep(2)  # Pause de 2 secondes entre chaque répétition du morceau
