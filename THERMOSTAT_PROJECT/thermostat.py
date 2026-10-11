@@ -94,9 +94,15 @@ def thermostatController(temp):
         buzzerController(0)
         lcdTemp(temp, consigne)
 
+dernier_calcul_temp = time.ticks_ms() 
+currentTemp = readTemp() 
+
 _thread.start_new_thread(readConsigneLoop, ())
 
 while True:
-    currentTemp = readTemp()
+    temps_actuel = time.ticks_ms()
+    if time.ticks_diff(temps_actuel, dernier_calcul_temp) >= 1000:
+        currentTemp = readTemp()
+        dernier_calcul_temp = temps_actuel
     thermostatController(currentTemp)
     sleep(0.02)
